@@ -11,12 +11,51 @@ namespace Colecciones
         static void Main(string[] args)
         {
             List<Alumno> alumnos = new List<Alumno>();
+            Alumno alumno1 = new Alumno();
 
+            alumno1.Nombre = "Jose Jose";
+            alumno1.Materias.Add(new Materia("Historia", "HST8594"));
+            alumno1.Materias.Add(new Materia("Matematicas", "MAT8594"));
+            alumno1.Materias.Add(new Materia("Civismo", "CIV8594"));
+            Alumno alumno2 = new Alumno();
+            alumno2.Nombre = "Mariano Marrano";
+            alumno2.Materias.Add(new Materia("Sonora", "HST8594"));
+            alumno2.Materias.Add(new Materia("Matematicas", "MAT8594"));
+            alumno2.Materias.Add(new Materia("Civismo", "CIV8594"));
+            Alumno alumno3 = new Alumno();
+            alumno3.Nombre = "Chabelo Televisa";
+            alumno3.Materias.Add(new Materia("Programacion", "HST8594"));
+            alumno3.Materias.Add(new Materia("Matematicas", "MAT8594"));
+            alumno3.Materias.Add(new Materia("Fisica", "CIV8594"));
+            Alumno alumno4 = new Alumno();
+            alumno4.Nombre = "Maicol Torres";
+            alumno4.Materias.Add(new Materia("Español", "HST8594"));
+            alumno4.Materias.Add(new Materia("Matematicas", "MAT8594"));
+            alumno4.Materias.Add(new Materia("Materia ULSA", "CIV8594"));
+
+            alumnos.Add(alumno1);
+            alumnos.Add(alumno3);
+            alumnos.Add(alumno2);
+            alumnos.Add(alumno4);
+
+
+            foreach(Alumno elemento in alumnos)
+            {
+                Console.WriteLine("Alumno: " + elemento.Nombre);
+                Console.WriteLine("Número de materias: " + elemento.Materias.Count);
+                foreach (Materia materia in elemento.Materias)
+                {
+                    Console.WriteLine("Materia: " + materia.Nombre);
+                }
+            }
+            
+            /* 
             //l'alumnos
             alumnos.Add(new Alumno());
             alumnos[0].Nombre = "Jose Jose";
             alumnos[0].Matricula="123654";
             alumnos[1].Nombre="Mariano Marrano";
+            alumnos[1].Matricula = "985674";
             alumnos[2].Nombre = "Chabelo Televisa";
             alumnos[2].Matricula = "859746";
             alumnos[3].Nombre = "Maicol Torres";
@@ -44,7 +83,7 @@ namespace Colecciones
                 Console.WriteLine("Materia: " + materia.Nombre);
                 //alumno.Materias[1].Nombre;
             }
-
+            */
             Console.ReadLine();
         }
     }
